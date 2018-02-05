@@ -1,0 +1,3 @@
+[submodule "src/JamGameCommon"]
+	path = src/JamGameCommon
+	url = https://github.com/samdup123/JamGameCommon
