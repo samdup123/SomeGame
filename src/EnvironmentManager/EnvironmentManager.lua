@@ -10,14 +10,22 @@ return function(uneditedEnvironmentEntities)
     allEntities = function()
       return environmentEntities
     end,
-    requestMovement = function(tag, movement)
-      local entityToMove = environmentEntities[tag]
+    requestMovement = function(tagOfEntityToBeMoved, movement)
+
+      local entityToMove = environmentEntities[tagOfEntityToBeMoved]
       local newLocation = {}
       newLocation.x = entityToMove.location.x + movement.deltaX
       newLocation.y = entityToMove.location.y + movement.deltaY
 
+      -- for tag, entity in pairs(environmentEntities) do
+      --   if tag ~= tagOfEntityToBeMoved then
+      --
+      --   end
+      -- end
+
       entityToMove.location.x = newLocation.x
       entityToMove.location.y = newLocation.y
+
       return true
     end
   }
