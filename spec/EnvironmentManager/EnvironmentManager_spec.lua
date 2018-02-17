@@ -56,15 +56,15 @@ describe('EnvironmentManager', function()
     {image = entity1.image, location = {x = entity1.location.x + 100, y = entity1.location.y + 100}, gravityCollision = true, otherCollision = true, width = 1, height = 1}})
   end)
 
-  -- it('should make a partial movement until colliding with an object', function()
-  --   local em
-  --   theHeightAndWidthForThisImageAre(imageMock1):and_also(theHeightAndWidthForThisImageAre(imageMock2))
-  --   :when(function() em = EnvironmentManager({['entity1'] = cloned(entity1), ['collisionEntity'] = cloned(collisionEntity)}) end)
-  --
-  --   local movementWasCompleted, deltaOfMovementThatTookPlaceIfNotCompleted = em.requestMovement('entity1', {deltaX = 0, deltaY = 100})
-  --
-  --   assert.is_false(movementWasCompleted)
-  --
-  --   assert.are.same(em.allEntities(), {['entity1'] = {image = entity1.image, location = {x = entity1.location.x + 100, y = entity1.location.y + 100}}})
-  -- end)
+  it('should make a partial movement until colliding with an object', function()
+    local em
+    theHeightAndWidthForThisImageAre(imageMock1):and_also(theHeightAndWidthForThisImageAre(imageMock2))
+    :when(function() em = EnvironmentManager({['entity1'] = cloned(entity1), ['collisionEntity'] = cloned(collisionEntity)}) end)
+
+    local movementWasCompleted, deltaOfMovementThatTookPlaceIfNotCompleted = em.requestMovement('entity1', {deltaX = 0, deltaY = 100})
+
+    assert.is_false(movementWasCompleted)
+
+    assert.are.same(em.allEntities(), {['entity1'] = {image = entity1.image, location = {x = entity1.location.x + 100, y = entity1.location.y + 100}}})
+  end)
 end)
