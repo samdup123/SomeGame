@@ -1,3 +1,9 @@
 [submodule "src/JamGameCommon"]
 	path = src/JamGameCommon
 	url = https://github.com/samdup123/JamGameCommon
+[submodule "lib/anim8"]
+	path = lib/anim8
+	url = https://github.com/kikito/anim8.git
+[submodule "lib/tiledWorker"]
+	path = lib/tiledWorker
+	url = https://github.com/karai17/Simple-Tiled-Implementation.git
