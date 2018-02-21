@@ -1,3 +1,6 @@
 [submodule "src/JamGameCommon"]
 	path = src/JamGameCommon
 	url = https://github.com/samdup123/JamGameCommon
+[submodule "lib/JamGameCommon"]
+	path = lib/JamGameCommon
+	url = https://github.com/samdup123/JamGameCommon.git
